@@ -74,3 +74,39 @@ _Bool is_keyword(char *token)
 
     return 0;
 }
+
+_Bool is_operator(char *token)
+{
+    char *operators[] = {
+        "+", "-",
+        "*", "/",
+        "%",  "=",
+        "+=", "-=",
+        "*=", "/=",
+        "%=", "&=",
+        "|=", "^=",
+        "<<=", ">>=",
+        "==", "!=",
+        "<", ">",
+        "<=", ">=",
+        "&&", "||",
+        "!", "&",
+        "|", "^",
+        "~", "<<",
+        ">>", "++",
+        "--", ".",
+        "->", "*",
+        "&", "?",
+        ":", ",",
+        ";", "sizeof",
+        ".", "#",
+        "##", "...",
+        NULL
+    };
+
+    for(size_t i = 0; operators[i] != NULL; ++i)
+        if(strcmp(operators[i], token) == 0)
+            return 1;
+
+    return 0;
+}
