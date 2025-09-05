@@ -21,3 +21,12 @@ _Bool is_keyword(char *token);
     @return: 1 - is operator, 0 - isn't operator
 */
 _Bool is_operator(char *token);
+
+/*
+    @brief: check if identifier is valid
+
+    @param: token - word that will be checked
+
+    @return: 1 - valid, 0 - invalid
+*/
+_Bool is_valid_identifier(char *token);
