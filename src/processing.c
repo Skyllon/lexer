@@ -110,3 +110,11 @@ _Bool is_operator(char *token)
 
     return 0;
 }
+
+_Bool is_valid_identifier(char *token)
+{
+    if(!isdigit(token[0]) && strlen(token) < 32)
+        return 1;
+
+    return 0;
+}
